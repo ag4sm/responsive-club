@@ -1,0 +1,119 @@
+:root {
+    --cubscoutorange: #F7D117;
+    --cubscoutblue: #003882;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    font-family: Open Sans,Arial,sans-serif;
+    font-size: 14px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cubscoutorange);
+    color: white;
+    font-size: 2rem;
+    text-shadow: 5px 5px 5px black;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    margin: 20px;
+}
+
+nav {
+    display: inline-flex;
+    justify-content: space-evenly;
+    height: 40px;
+    width: 100%;
+    background-color: var(--cubscoutblue);
+}
+
+nav ul li {
+    display: inline-flex;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 1rem;
+    flex-flow: wrap;
+}
+
+h2 {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+table {
+    border: 2px solid gray;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 0.2rem;
+}
+
+.side {
+    flex-basis: 200px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    flex-shrink: 3;
+}
+
+.center img {
+    padding: 1.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+    header {
+        height: auto;
+    }
+    
+    .calendar-desktop {
+        display: none;
+    }
+
+    nav {
+        height: auto;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .calendar-mobile {
+        display: none;
+    }
+}
